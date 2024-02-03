@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use  App\Http\Controllers\StudentsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,14 +17,19 @@ use Illuminate\Support\Facades\Route;
 //     return view('about')->with(compact('id','name'));
 // });
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('welcomepage');
+// Route::get('/', function () {
+//     return view('welcome');
+// })->name('welcomepage');
 
-Route::get('/about', function () {
-    return view('about');
-})->name('aboutpage');
+// Route::get('/about', function () {
+//     return view('about');
+// })->name('aboutpage');
 
-Route::get('/contact', function () {
-    return view('contact');
-})->name('contactpage');
+// Route::get('/contact', function () {
+//     return view('contact');
+// })->name('contactpage');
+
+Route::get('/',[StudentsController::class,'home'])->name('homepage');
+Route::get('/about',[StudentsController::class,'about'])->name('aboutpage');
+Route::get('/contact',[StudentsController::class,'contact'])->name('contactpage');
+
