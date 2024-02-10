@@ -22,6 +22,12 @@
                 <a class="nav-link active" aria-current="page" href="{{ route('contactpage') }}">contact</a>
               </li>
               <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{{ route('registerpage') }}">register</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{{ route('userpage') }}">users</a>
+              </li>
+              <li class="nav-item">
                 <a class="nav-link" href="{{ route('aboutpage') }}">about</a>
               </li>
               <li class="nav-item dropdown">

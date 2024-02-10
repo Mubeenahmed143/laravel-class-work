@@ -1,4 +1,3 @@
-<h1>about page</h1>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -53,10 +52,38 @@
           </div>
         </div>
       </nav>
+
+      <div class="container">
+        <h1>Registered Users</h1>
+      <div
+        class="table-responsive"
+      >
+        <table
+            class="table table-success"
+        >
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Gender</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach ($data as $k)
+                    
+                <tr class="">
+                    <td scope="row">{{$k->id}}</td>
+                    <td scope="row">{{$k->name}}</td>
+                    <td scope="row">{{$k->email}}</td>
+                    <td scope="row">{{$k->gender}}</td>
+                </tr>
+                
+                @endforeach
+            </tbody>
+        </table>
+      </div>
+    </div>
+
 </body>
 </html>
-
-<a href="/">home</a>
-
-{{-- {{$id}}
-{{$name}} --}}

@@ -32,4 +32,7 @@ use  App\Http\Controllers\StudentsController;
 Route::get('/',[StudentsController::class,'home'])->name('homepage');
 Route::get('/about',[StudentsController::class,'about'])->name('aboutpage');
 Route::get('/contact',[StudentsController::class,'contact'])->name('contactpage');
+Route::get('/register',[StudentsController::class,'register_view' ])->name('registerpage');
+Route::POST('/register', [StudentsController::class , 'register' ]);
+Route::get('/user/view',[StudentsController::class,'user_view' ])->name('userpage');
 
